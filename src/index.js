@@ -69,12 +69,13 @@ function setDelay(difficulty) {
 function chooseHole(holes) {
   // TODO: Write your code here.
 const index = randomInteger(0, 8);
-const hole = hiles[index];
+const hole = holes[index];
 if (hole === lastHole) {
   return chooseHole(holes);
 }
 lastHole = hole;
 return hole;
+
 }
 
 /**
@@ -193,7 +194,7 @@ function updateTimer() {
   // hint: this code is provided to you in the instructions.
   if (time > 0) {
     time -= 1;
-    timerDisplay,textContent = time;
+    timerDisplay.textContent = time;
   }
   return time;
 }
@@ -278,6 +279,7 @@ function startGame(){
 startButton.addEventListener("click", startGame);
 
 
+
 // Please do not modify the code below.
 // Used for testing purposes.
 window.randomInteger = randomInteger;
@@ -297,3 +299,4 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
+
