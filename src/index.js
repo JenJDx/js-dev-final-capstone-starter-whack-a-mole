@@ -75,7 +75,6 @@ if (hole === lastHole) {
 }
 lastHole = hole;
 return hole;
-
 }
 
 /**
